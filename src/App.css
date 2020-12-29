@@ -303,10 +303,10 @@ nav {
     height: 300px;
   }
   .details h1 {
-    font-size: 38px;
+    font-size: 30px;
   }
   .details h2 {
-    font-size: 28px;
+    font-size: 20px;
   }
   .pages svg {
     transform: scale(1.5);

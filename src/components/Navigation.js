@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 function Navigation({ setDetails, page, setPage }) {
   const changePage = (e) => {
@@ -53,7 +53,7 @@ function Navigation({ setDetails, page, setPage }) {
     }
 
     switchDots(page);
-  }, [page]);
+  }, [page, setDetails]);
 
   return (
     <div className="pages">

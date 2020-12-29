@@ -47,6 +47,9 @@ function Portfolio({ match }) {
         </div>
       </div>
       <div className="story">
+        <div className="profile">
+          <img src={`./img/${image}-profile.jpg`} alt="profile" />
+        </div>
         <div className="story-description">
           <h3>My Story</h3>
           <p>
@@ -62,9 +65,6 @@ function Portfolio({ match }) {
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum
           </p>
-        </div>
-        <div className="profile">
-          <img src={`./img/${image}-profile.jpg`} alt="profile" />
         </div>
       </div>
       <div className="my-work">

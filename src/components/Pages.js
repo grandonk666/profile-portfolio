@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import Details from "./Details";
 import Hero from "./Hero";
 import Navigation from "./Navigation";
@@ -47,7 +47,11 @@ function Pages({ setBackgroundColor }) {
   useEffect(() => {
     const throttledPage = throttle(throttle(scrollChange, 1000));
     window.addEventListener("wheel", throttledPage);
-    return () => window.removeEventListener("wheel", throttledPage);
+    window.addEventListener("touchmove", throttledPage);
+    return () => {
+      window.removeEventListener("wheel", throttledPage);
+      window.addEventListener("touchmove", throttledPage);
+    };
   }, []);
 
   useEffect(() => {
